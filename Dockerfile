@@ -1,7 +1,6 @@
 FROM prom/node-exporter:latest
 
+USER root
 COPY entrypoint.sh /etc/node-exporter/
-RUN chmod +x /etc/node-exporter/entrypoint.sh
-
-ENTRYPOINT  [ "/etc/node-exporter/docker-entrypoint.sh" ]
-CMD [ "/bin/node_exporter" ]
+ENTRYPOINT ["sh", "/etc/node-exporter/entrypoint.sh"]
+CMD ["/bin/node_exporter"]

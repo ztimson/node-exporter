@@ -4,7 +4,7 @@ This is a copy of [prom/node-exporter](https://hub.docker.com/r/prom/node-export
 
 ## Example
 
-For the hostname to be detected, you must load the host filesystem into the container's `/host` directory as seen here.
+For the hostname to be detected, you must mount the host's `rootfs` into the container's `/host` directory as seen here:
 
 ```
 version: '3.8'
@@ -21,5 +21,3 @@ services:
     deploy:
       mode: global
 ```
-
-Otherwise use the `$HOSTNAME` variable to specify the path to the *hostname file* & ensure it's mounted.
