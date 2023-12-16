@@ -35,6 +35,7 @@
     - [Setup](#setup)
         - [Production](#production)
         - [Development](#development)
+    - [License](#license)
 
 ## About
 
@@ -94,3 +95,8 @@ services:
 2. Run docker image: `docker run -v "/:/host:ro,rslave" MY_IMAGE:TAG --path.rootfs=/host`
 
 </details>
+
+## License
+Copyright © 2023 Zakary Timson | Available under the Apache 2.0 License
+
+See the [license](./LICENSE) for more information.
